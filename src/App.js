@@ -8,16 +8,18 @@ import Header from './components/Header';
 import Save from './pages/Save';
 import Exit from './pages/Exit';
 import Footer from './components/Footer';
+import WelcomePage from './pages/WelcomePage';
 function App() {
 	return (
 		<div className="app">
 			<Header />
 			<Routes>
+				<Route path="/" exact element={<WelcomePage />} />
 				<Route path="/search" exact element={<Search />} />
 				<Route path="/moreinfo" exact element={<Moreinfo />} />
 				<Route path="/save" exact element={<Save />} />
-				<Route path="/exit" exact element={<Exit />} />
-				<Route path="/" exact element={<Home />} />
+				<Route path="/" exact element={<Exit />} />
+				<Route path="/home" exact element={<Home />} />
 			</Routes>
 			<Footer />
 		</div>
