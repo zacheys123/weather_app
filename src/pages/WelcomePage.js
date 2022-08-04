@@ -13,6 +13,13 @@ function WelcomePage() {
 				</h2>
 			</div>
 			<Button variant="outlined" onClick={() => navigate('/home')}>
+				<span
+					className="spinner-border"
+					role="status"
+					aria-hidden="true"
+				>
+					&nbsp;
+				</span>
 				launch Website
 			</Button>
 		</div>

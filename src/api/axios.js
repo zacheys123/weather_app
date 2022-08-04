@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import axios from 'axios';
 // export const SelectData = (query, setWeather) => {
 // 	const options = {
 // 		method: 'GET',
@@ -35,30 +33,3 @@ import axios from 'axios';
 // 	}
 
 // };
-export const SelectData = async (
-	query,
-	setWeatherQuery,
-	setQuery,
-) => {
-	const api = {
-		key: 'd2476d991ec7b32823e88ddfabc6db90',
-		base: 'https://api.openweathermap.org/data/2.5/',
-	};
-	try {
-		let response = await axios(
-			`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`,
-		);
-		setWeatherQuery(response.data);
-		setQuery('');
-	} catch (err) {
-		if (err.response) {
-			console.log(err.response.data);
-			console.log(err.response.status);
-			console.log(err.response.headers);
-		} else if (err.request) {
-			console.log('Error while requesting');
-		} else {
-			console.log('server error');
-		}
-	}
-};

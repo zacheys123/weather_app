@@ -3,8 +3,7 @@
 	margin-top: -10px;
 	justify-content: space-between;
 	align-items: center;
-	padding-right: 0.9rem;
-	padding-left: 0.9rem;
+	padding: 1rem;
 	border: 1px solid grey !important;
 }
 .header .menu {
